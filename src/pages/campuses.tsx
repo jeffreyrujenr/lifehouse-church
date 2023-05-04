@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useRouter } from 'next/router';
 
 type Props = {};
@@ -8,7 +6,7 @@ const Campuses = (props: Props) => {
 	const router = useRouter();
 
 	return (
-		<div>
+		<div className='page'>
 			campuses
 			<h3>Join our Sunday Services</h3>
 			<p
