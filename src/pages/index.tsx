@@ -1,9 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import thunder from 'next/font/local';
 
 import { useRouter } from 'next/navigation';
 
 type Props = {};
+
+const thunderFont = thunder({ src: '../fonts/thunder/Thunder-BoldLC.woff2' });
 
 export default function Home() {
 	const router = useRouter();
@@ -24,65 +27,79 @@ export default function Home() {
 					rel='icon'
 					href='/favicon.ico'
 				/>
+				``
 			</Head>
-			<main className='page'>
-				<Image
-					className='border-2 border-white rounded my-2'
-					src=''
-					alt='Picture Banner'
-					height={180}
-					width={420}
-				/>
-				<h1 className='text-3xl my-2'>Disciple & Send</h1>
-				<p className='px-4'>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque
-					assumenda modi consequuntur libero magnam, tempora voluptatem possimus
-					dolore qui fugiat necessitatibus ipsa vitae expedita. Impedit.
-				</p>
-				<div className='flex px-4 my-2'>
-					<div className='w-2/3'>
-						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque
-							assumenda modi consequuntur libero magnam, tempora voluptatem
-							possimus dolore qui fugiat necessitatibus ipsa vitae expedita.
-							Impedit.
+			<main
+				className='hero min-h-[90vh]'
+				style={{
+					backgroundImage: `url("../background.jpg")`,
+				}}>
+				<div className='hero-overlay bg-opacity-75'></div>
+				<div className='hero-content text-center text-neutral-content'>
+					<div className='max-w-xl'>
+						<h1
+							className={`${thunderFont.className} tracking-widest mb-5 text-5xl font-bold`}>
+							LIFEHOUSE CHURCH
+						</h1>
+						<p className='mb-5'>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+							tenetur impedit saepe iste. Placeat assumenda illum esse minima
+							magnam dolores inventore maiores rerum vitae nemo?
 						</p>
-						<button
-							onClick={() => router.push('/about')}
-							className='px-3 py-1 m-4 rounded border-2 border-white'>
-							About
-						</button>
+						<div className='flex justify-evenly items-center flex-wrap'>
+							<div className='rounded btn btn-ghost block mx-8 h-full p-4'>
+								<Image
+									src=''
+									height={16}
+									width={16}
+									alt=''
+								/>
+								<h1 className='text-xl bold mb-2'>Bengaluru</h1>
+								<p className='mb-1'>9:00 AM IST</p>
+								<p className='mb-1'>11:00 AM IST</p>
+							</div>
+							<div className='rounded btn btn-ghost block mx-8 h-full p-4'>
+								<Image
+									src=''
+									height={16}
+									width={16}
+									alt=''
+								/>
+								<h1 className='text-xl bold mb-2'>Trichy</h1>
+								<p className='mb-1'>10:30 AM IST</p>
+							</div>
+							<div className='rounded btn btn-ghost block mx-8 h-full p-4'>
+								<Image
+									src=''
+									height={16}
+									width={16}
+									alt=''
+								/>
+								<h1 className='text-xl bold mb-2'>Chennai</h1>
+								<p className='mb-1'>10:30 AM IST</p>
+							</div>
+							<div className='rounded btn btn-ghost block mx-8 h-full p-4'>
+								<Image
+									src=''
+									height={16}
+									width={16}
+									alt=''
+								/>
+								<h1 className='text-xl bold mb-2'>Tirunelveli</h1>
+								<p className='mb-1'>Coming soon</p>
+							</div>
+							<div className='rounded btn btn-ghost block mx-8 h-full p-4'>
+								<Image
+									src=''
+									height={16}
+									width={16}
+									alt=''
+								/>
+								<h1 className='text-xl bold mb-2'>London</h1>
+								<p className='mb-1'>Coming soon</p>
+							</div>
+						</div>
 					</div>
-					<Image
-						className='border-2 border-white rounded ml-4'
-						src=''
-						alt='Image'
-						height={144}
-						width={256}
-					/>
-				</div>
-				<div className='flex justify-evenly items-center w-full'>
-					<Image
-						className='border-2 border-white rounded my-4 mx-2'
-						src=''
-						alt='Gallery Image 1'
-						height={144}
-						width={256}
-					/>
-					<Image
-						className='border-2 border-white rounded my-4 mx-2'
-						src=''
-						alt='Gallery Image 1'
-						height={144}
-						width={256}
-					/>
-					<Image
-						className='border-2 border-white rounded my-4 mx-2'
-						src=''
-						alt='Gallery Image 1'
-						height={144}
-						width={256}
-					/>
 				</div>
 			</main>
 		</>

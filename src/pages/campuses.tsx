@@ -7,27 +7,31 @@ const Campuses = (props: Props) => {
 
 	return (
 		<div className='page'>
-			campuses
 			<h3>Join our Sunday Services</h3>
 			<p
 				className='cursor-pointer'
-				onClick={() => router.push('/bangalore')}>
+				onClick={() => router.push('/campuses/bangalore')}>
 				Bangalore
 			</p>
 			<p
 				className='cursor-pointer'
-				onClick={() => router.push('/chennai')}>
+				onClick={() => router.push('/campuses/chennai')}>
 				Chennai
 			</p>
 			<p
 				className='cursor-pointer'
-				onClick={() => router.push('/trichy')}>
+				onClick={() => router.push('/campuses/trichy')}>
 				Trichy
 			</p>
 			<p
 				className='cursor-pointer'
-				onClick={() => router.push('/tirunelveli')}>
+				onClick={() => router.push('/campuses/tirunelveli')}>
 				Tirunelveli
+			</p>
+			<p
+				className='cursor-pointer'
+				onClick={() => router.push('/campuses/london')}>
+				London
 			</p>
 		</div>
 	);

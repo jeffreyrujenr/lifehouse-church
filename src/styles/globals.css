@@ -4,6 +4,6 @@
 
 @layer base {
     .page {
-        @apply h-[90vh] flex flex-col justify-center items-center;
+        @apply h-[90vh] mx-auto flex flex-col justify-center items-center;
     }
 }
