@@ -1,10 +1,8 @@
 import thunder from 'next/font/local';
 
-type Props = {};
-
 const thunderFont = thunder({ src: '../fonts/thunder/Thunder-BoldLC.woff2' });
 
-const AboutUs = (props: Props) => {
+const page = () => {
 	return (
 		<div className='page'>
 			about
@@ -15,4 +13,4 @@ const AboutUs = (props: Props) => {
 	);
 };
 
-export default AboutUs;
+export default page;

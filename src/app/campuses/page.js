@@ -1,8 +1,6 @@
 import { useRouter } from 'next/router';
 
-type Props = {};
-
-const Campuses = (props: Props) => {
+const page = () => {
 	const router = useRouter();
 
 	return (
@@ -37,4 +35,4 @@ const Campuses = (props: Props) => {
 	);
 };
 
-export default Campuses;
+export default page;
