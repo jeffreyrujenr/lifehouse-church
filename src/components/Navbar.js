@@ -1,14 +1,14 @@
+'use client';
+
 import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import thunder from 'next/font/local';
 
-type Props = {};
-
 const thunderFont = thunder({ src: '../fonts/thunder/Thunder-BoldLC.woff2' });
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
 	const router = useRouter();
 
 	const [toggled, setToggled] = useState(false);

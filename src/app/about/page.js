@@ -1,6 +1,8 @@
 import thunder from 'next/font/local';
 
-const thunderFont = thunder({ src: '../fonts/thunder/Thunder-BoldLC.woff2' });
+const thunderFont = thunder({
+	src: '../../fonts/thunder/Thunder-BoldLC.woff2',
+});
 
 const page = () => {
 	return (
