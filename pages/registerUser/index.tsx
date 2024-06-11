@@ -18,8 +18,8 @@ const index = () => {
         <Input className="my-2" label="Mobile" />
         <Input className="my-2" label="Email" />
         <Select className="my-2" label="Gender">
-          <SelectItem>Male</SelectItem>
-          <SelectItem>Female</SelectItem>
+          <SelectItem key="male">Male</SelectItem>
+          <SelectItem key="female">Female</SelectItem>
         </Select>
         <DateInput className="my-2" label="Date of Birth" />
         <Button className="w-full my-2" color="primary" variant="shadow">
