@@ -52,11 +52,11 @@ const Index = ({ users }: Users) => {
   const router = useRouter();
 
   return (
-    <main className="flex flex-col justify-center items-center min-h-screen p-4">
-      <h1 className="mb-4 text-2xl">Users Table</h1>
+    <main className="flex flex-col justify-center items-center min-h-[90vh] p-4">
       <Table
         aria-label="Users table"
         onRowAction={(key) => router.push(`/users/${key}`)}
+        className="shadow-lg"
       >
         <TableHeader>
           <TableColumn key="name">Name</TableColumn>

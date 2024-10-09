@@ -5,7 +5,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <main className="flex flex-col min-h-screen justify-center items-center w-48 mx-auto">
+    <main className="flex flex-col min-h-[90vh] w-[90%] max-w-xs mx-auto justify-center items-center">
       <Button
         className="my-2 w-full"
         color="primary"

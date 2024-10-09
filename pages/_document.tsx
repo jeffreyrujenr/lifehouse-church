@@ -5,7 +5,7 @@ import NavigationBar from "@/components/NavigationBar";
 export default function Document() {
   return (
     <Providers>
-      <Html lang="en" className="dark">
+      <Html lang="en" className="light">
         <Head />
         <NavigationBar />
         <body>

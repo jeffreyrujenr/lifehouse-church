@@ -1,31 +1,65 @@
 import { Button, Input } from "@nextui-org/react";
+import { useState } from "react";
 
-const index = () => {
+const Index = () => {
+  const [user, setUser] = useState({});
+  const [error, setError] = useState({
+    mobileError: {
+      bool: false,
+      message: "",
+    },
+    nameError: {
+      bool: false,
+      message: "",
+    },
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleFormInputChange = (e: any) => {
+    setUser({
+      ...user,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const submitForm = () => {
+    setLoading(true);
+  };
+
   return (
-    <main className="flex flex-col min-h-screen justify-center items-center">
+    <main className="flex flex-col min-h-[90vh] justify-center items-center">
       <form
-        action=""
-        className="flex flex-col h-full justify-center items-center"
+        onSubmit={submitForm}
+        className="flex flex-col h-full w-[90%] max-w-xs justify-center items-center shadow-lg rounded-lg p-4"
       >
         <Input
           isClearable
-          startContent={<p>+91</p>}
-          className="w-full"
-          type="text"
+          className="my-2"
           label="Mobile"
-          placeholder="9876543210"
-          description="Enter WhatsApp mobile number"
+          name="mobile"
+          onChange={handleFormInputChange}
+          errorMessage={error.mobileError.message}
+          isInvalid={error.mobileError.bool}
+          inputMode="tel"
         />
         <p className="py-2">or</p>
         <Input
           isClearable
-          className="w-full"
-          type="text"
+          className="my-2"
           label="Name"
-          placeholder="Jesus Christ"
-          description="Enter full name in sentence case"
+          name="name"
+          onChange={handleFormInputChange}
+          errorMessage={error.nameError.message}
+          isInvalid={error.nameError.bool}
         />
-        <Button className="my-4 w-full" color="primary" variant="shadow">
+        <Button
+          type="submit"
+          className="w-full mt-2"
+          color="primary"
+          variant="shadow"
+          isLoading={loading}
+          inputMode="tel"
+        >
           Check In
         </Button>
       </form>
@@ -33,4 +67,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
